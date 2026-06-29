@@ -5,7 +5,6 @@ import {
   ensureMockGeneration,
   getMockArtifactContent,
   getMockArtifacts,
-  getMockGeneration,
   getMockGenerationDetail,
   mockGenerations,
   updateMockGenerationStatus
