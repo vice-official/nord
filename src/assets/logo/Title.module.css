@@ -1,0 +1,22 @@
+.title,
+.title:visited,
+.title:focus,
+.title:active  {
+    text-align: center;
+    font-family: var(--font-logo);
+    color: var(--text-main);
+    font-size: var(--font-size-normal);
+    font-weight: var(--font-weight-normal);
+    text-decoration: none;
+    outline: none;
+
+}
+
+.logoLink,
+.logoLink:hover,
+.logoLink:visited,
+.logoLink:focus,
+.logoLink:active {
+    text-decoration: none;
+    outline: none;
+}

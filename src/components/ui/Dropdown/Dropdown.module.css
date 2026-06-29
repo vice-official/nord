@@ -1,0 +1,111 @@
+.dropdown {
+    position: relative;
+    width: auto;
+    font-family: var(--font-main);
+    box-sizing: border-box;
+}
+
+.trigger {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    max-width: 170px;
+    min-height: 32px;
+    padding: 4px 8px 4px 10px;
+    background: transparent;
+    border: none;
+    border-radius: 14px;
+    color: var(--text-main);
+    font-size: 18px;
+    line-height: 20px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+}
+
+.trigger:hover,
+.trigger.active {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.textMain,
+.textPlaceholder {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.textMain {
+    color: var(--text-main);
+}
+
+.textPlaceholder {
+    color: var(--text-secondary);
+}
+
+.arrow {
+    color: var(--text-secondary);
+    transition: transform 0.2s ease, color 0.2s ease;
+    flex-shrink: 0;
+}
+
+.trigger:hover .arrow,
+.trigger.active .arrow {
+    color: var(--text-main);
+}
+
+.arrowOpen {
+    transform: rotate(180deg);
+}
+
+.menu {
+    position: absolute;
+    right: 0;
+    width: max-content;
+    min-width: 180px;
+    max-width: 280px;
+    max-height: 220px;
+    overflow-y: auto;
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-secondary);
+    border-radius: 14px;
+    z-index: 50;
+    list-style: none;
+    margin: 0;
+    padding: 6px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8);
+    white-space: nowrap;
+}
+
+.openUp {
+    bottom: calc(100% + 8px);
+}
+
+.option {
+    padding: 8px 12px;
+    color: var(--text-secondary);
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.option:hover {
+    background-color: rgba(255, 255, 255, 0.06);
+    color: var(--text-main);
+}
+
+.option.selected {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--text-main);
+}
+
+.menu::-webkit-scrollbar {
+    width: 6px;
+}
+
+.menu::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+}

@@ -1,0 +1,13 @@
+.chatHeader {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.chatHeaderHeading {
+    font-family: var(--font-main);
+    font-size: var(--font-size-large);
+    font-weight: var(--font-weight-normal);
+}
