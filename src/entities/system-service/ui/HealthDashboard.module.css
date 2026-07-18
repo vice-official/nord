@@ -1,0 +1,74 @@
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid var(--border-secondary);
+    border-radius: 16px;
+    background: rgba(22, 24, 31, 0.4);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.refreshButton {
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: var(--bg-tertiary);
+    color: var(--text-main);
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.serviceRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.serviceInfo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.statusIndicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.status_ok { background-color: #10b981; box-shadow: 0 0 8px #10b981; }
+.status_degraded { background-color: #f59e0b; box-shadow: 0 0 8px #f59e0b; }
+.status_failed { background-color: #ef4444; box-shadow: 0 0 8px #ef4444; }
+.status_unknown { background-color: #6b7280; }
+
+.serviceName {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.metrics {
+    font-size: 13px;
+    color: var(--text-secondary);
+}

@@ -1,0 +1,274 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    width: 288px;
+    min-width: 288px;
+    height: 100vh;
+    padding: 18px 12px;
+    overflow: hidden;
+    flex-shrink: 0;
+    z-index: 10;
+    border-right: 1px solid var(--border-secondary);
+    background-color: #15171f;
+    color: var(--text-secondary);
+    transition: width 0.25s ease, min-width 0.25s ease, padding 0.25s ease;
+}
+
+.sidebarToggleContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 42px;
+    margin-bottom: 14px;
+}
+
+.logoLink {
+    display: flex;
+    align-items: center;
+    min-width: 0;
+    min-height: 42px;
+    padding: 0 12px;
+    border-radius: 12px;
+    color: var(--text-main);
+    text-decoration: none;
+    transition: background-color 0.15s ease, opacity 0.2s ease;
+}
+
+.logoLink:hover {
+    background-color: rgba(255, 255, 255, 0.07);
+}
+
+.sidebarToggleButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    color: var(--text-secondary);
+    background: transparent;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.sidebarToggleButton:hover {
+    color: var(--text-main);
+    background-color: rgba(255, 255, 255, 0.07);
+}
+
+.sidebarToggleButtonIcon {
+    display: flex;
+    width: 18px;
+    height: 18px;
+}
+
+.sidebarTopActions {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 18px;
+}
+
+.sidebarTopActionsItem {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.addNewChatIcon {
+    color: currentColor;
+}
+
+.searchBox {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 40px;
+    padding: 0 10px;
+    gap: 9px;
+    border: 1px solid var(--border-secondary);
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.04);
+}
+
+.searchBoxIcon {
+    width: 17px;
+    height: 17px;
+    flex-shrink: 0;
+    color: var(--text-secondary);
+}
+
+.searchInput {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--text-main);
+    font-family: var(--font-main);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.searchInput::placeholder {
+    color: var(--text-secondary);
+}
+
+.searchClearButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    color: var(--text-secondary);
+    font-size: 18px;
+    line-height: 1;
+}
+
+.searchClearButton:hover {
+    color: var(--text-main);
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.recentChats {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-height: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+.recentChatsButton {
+    width: 100%;
+    margin: 0 0 8px;
+    padding: 0 10px;
+    background: transparent;
+    text-align: left;
+    cursor: default;
+}
+
+.recentChatsButtonLabel {
+    margin: 0;
+    color: var(--text-secondary);
+    font-family: var(--font-main);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    line-height: 28px;
+    text-transform: uppercase;
+    transition: opacity 0.15s ease;
+}
+
+.recentChatsList {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 2px;
+    min-height: 0;
+    margin: 0;
+    padding: 0 2px 12px 0;
+    overflow-y: auto;
+    list-style: none;
+}
+
+.recentChatsListItem {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+}
+
+.sidebar.closedSidebar {
+    width: 72px;
+    max-width: 72px;
+    min-width: 72px;
+    padding: 18px 10px;
+}
+
+.sidebar.closedSidebar .sidebarToggleContainer {
+    justify-content: center;
+}
+
+.sidebar.closedSidebar .logoLink {
+    position: absolute;
+    top: 18px;
+    left: 10px;
+    justify-content: center;
+    width: 52px;
+    padding: 0;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.sidebar.closedSidebar .sidebarToggleButton {
+    position: absolute;
+    top: 22px;
+    left: 19px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sidebar.closedSidebar .sidebarToggleContainer:hover .logoLink {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sidebar.closedSidebar .sidebarToggleContainer:hover .sidebarToggleButton {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.sidebar.closedSidebar .recentChatsButtonLabel {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sidebar.closedSidebar :global([class*="sidebarItemButtonLabel"]) {
+    display: none;
+}
+
+.sidebar.closedSidebar :global([class*="generatingDot"]) {
+    position: absolute;
+    right: 7px;
+    top: 7px;
+    margin: 0;
+}
+
+.sidebar.closedSidebar :global([class*="sidebarItemButton"]) {
+    justify-content: center;
+    padding: 0;
+    gap: 0;
+}
+
+.sidebar.closedSidebar :global([class*="icon"]) {
+    margin: 0;
+}
+
+.disabledAction {
+    opacity: 0.4;
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+.logoIcon {
+    width: 32px;
+    height: 32px;
+    display: block;
+    flex-shrink: 0;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.logoLink:hover .logoIcon {
+    transform: scale(1.05);
+    opacity: 0.85;
+}
+
+.logoLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
